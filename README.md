@@ -8,3 +8,7 @@ When a user needs a new password all they simply have to do is press the "Genera
 
 ## Image of the Project w/ a Generated Password:
 ![Image of project](./WorkingProject.png)
+
+## Link To Live Site: 
+https://liam04290.github.io/Password-Generator-with-JavaScript/
+
