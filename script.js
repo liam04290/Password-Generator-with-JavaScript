@@ -4,15 +4,23 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  
+  // Return null if user inupts nothing
+  if (password === null) {
+    alert("Please select at least one character set.");
+  } else {
+    passwordText.value = password;
+  }
 }
 
 function generatePassword() {
 
   // Password option prompts
-  var length = parseInt(prompt("How many characters would you like in your password?"));
+  var length;
+  // Do-while loop ensures user's input is 8-128 characters
+  do {
+    length = parseInt(prompt("Enter password length (8-128 characters):"));
+  } while (length < 8 || length > 128);
   var includeUppercase = confirm("Do you want uppercase letters?");
   var includeLowercase = confirm("Do you want lowercase letters?");
   var includeNumeric = confirm("Do you want numbers?");
@@ -40,6 +48,11 @@ function generatePassword() {
   if (includeSpecialChars) {
     charSets.push(specialChars);
   }
+  // Checks if user inputs at least one character set, if not, returns null
+  if (charSets.length === 0) {
+    return null;
+  }
+
 
   // Generate password
   var password = "";
