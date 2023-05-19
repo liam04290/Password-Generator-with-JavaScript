@@ -7,4 +7,4 @@ This password generator will give the user a new password to use when they click
 When a user needs a new password all they simply have to do is press the "Generate Password" button and they will be guided through the process of creating a new password with their input.
 
 ## Image of the Project w/ a Generated Password:
-!(./WorkingProject.png)
+![Image of project](./WorkingProject.png)
